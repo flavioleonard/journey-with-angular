@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 @Component({
   selector: 'app-botao-controle',
   templateUrl: './botao-controle.component.html',

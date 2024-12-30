@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-  @Input() src: string = "" //isso vai dizer que os nossos valores de src vao ser passados como props
-  @Input() alt: string = ""
-
+  @Input() src: string = '';
+  @Input() alt: string = '';
 }

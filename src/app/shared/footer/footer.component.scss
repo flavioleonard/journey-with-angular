@@ -1,47 +1,25 @@
 .app-footer {
-    
-    .mat-toolbar {
-        background-color: black;
-        color: white;
-        padding: 0 8rem;
-        height: 14.5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-    
-}
-
-.footer-about {
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  .inner {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.7rem;
-    
-    p {
-        margin: 0;
-    }
-
-    img {
-        display: flex;
-        max-width: 10.125rem;
-        max-height: 2.5rem;
-    }
-}
-
-.footer-social {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    .social-icons{
-        display: flex;
-        flex-direction: row;
-        
-        button{
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
+    img {
+      max-width: 100%;
+      max-height: 40px;
     }
+    ul {
+      padding: 0;
+      list-style: none;
+      &.socials {
+        li {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

@@ -1,15 +1,12 @@
 .card {
-    padding: 1.5rem;
-    &.primary{
-        // os estilos daqui serão aplicados a todos os components card e com a class primary
-        background-color: #FEF7FF;
-        border: 1px solid #CAC4D0;
-        border-radius: 0.75rem;
-    }
-
-    &.secondary{
-        background-color: #F5F5F5;
-        border-radius: 1rem;
-        
-    }
+  padding: 24px;
+  &.primary {
+    background: #FEF7FF;
+    border: 1px solid #CAC4D0;
+    border-radius: 12px;
+  }
+  &.secondary {
+    background: #F5F5F5;
+    border-radius: 16px;
+  }
 }
