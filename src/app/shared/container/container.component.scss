@@ -1,0 +1,7 @@
+:host {
+    display: block;
+    margin: 0 auto;
+    max-width: 1048px;
+    width: 90%;
+    // host vai pegar a parte mais de fora do componente que é o meu <ng-content> e vai aplicar essas características nele 
+}
