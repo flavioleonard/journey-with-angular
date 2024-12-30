@@ -2,7 +2,7 @@
   <form [formGroup]="formBuscaService.formBusca">
     <h2>Passagens</h2>
     <div class="flex-container">
-      <mat-button-toggle-group aria-label="Tipo de passagem" formControlName="somenteIda"> 
+      <mat-button-toggle-group aria-label="Tipo de passagem" formControlName="somenteIda">
         <!-- formControlName é o que faz eu linkar o meu somenteIda: new FormControl(false) aqui -->
         <mat-button-toggle [value]="false">
           <mat-icon *ngIf="!formBuscaService.formBusca.get('somenteIda')?.value">check</mat-icon>
@@ -19,25 +19,11 @@
       </mat-chip-listbox>
     </div>
     <div class="flex-container">
-      <mat-form-field class="input-container" appearance="outline">
-        <mat-label>Origem</mat-label>
-        <mat-icon matPrefix>
-          flight_takeoff
-        </mat-icon>
-        <input matInput placeholder="Origem">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
+      <app-dropdown-uf label="Origem" iconePrefixo="flight_takeoff"></app-dropdown-uf>
       <button mat-icon-button>
         <mat-icon>sync_alt</mat-icon>
       </button>
-      <mat-form-field class="input-container" appearance="outline">
-        <mat-label>Destino</mat-label>
-        <mat-icon matPrefix>
-          flight_land
-        </mat-icon>
-        <input matInput placeholder="Destino">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
+      <app-dropdown-uf label="Destino" iconePrefixo="flight_land"></app-dropdown-uf>
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Data de ida</mat-label>
         <input matInput [matDatepicker]="ida">

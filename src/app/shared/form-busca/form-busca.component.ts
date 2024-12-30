@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { FormBuscaService } from 'src/app/core/services/form-busca.service';
@@ -10,12 +10,11 @@ import { FormBuscaService } from 'src/app/core/services/form-busca.service';
 })
 export class FormBuscaComponent {
   constructor(public dialog: MatDialog, 
-    public formBuscaService: FormBuscaService) {}
-// injetei o meu formBuscaService do tipo FormBuscaService para que eu possa usar o service aqui nessa class 
+    public formBuscaService : FormBuscaService) {}
+
   openDialog() {
     this.dialog.open(ModalComponent, {
       width: '50%'
     })
   }
-  
 }

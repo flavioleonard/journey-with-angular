@@ -9,14 +9,14 @@ import { environment } from 'src/environments/environment';
 })
 export class PromocaoService {
 
-  private apiURL: string = environment.apiURL;
+  private apiUrl: string = environment.apiUrl;
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
   listar () : Observable<Promocao[]> {
-    return this.httpClient.get<Promocao[]>(`${this.apiURL}/promocoes`)
+    return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)
   }
   // AQUI EU FAÇO A MINHA REQUISIÇÃO DE LISTAR QUE VAI PODER SER USADA POR TODA A APLICAÇÃO
 }
