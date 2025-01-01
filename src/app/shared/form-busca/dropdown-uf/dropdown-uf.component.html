@@ -1,14 +1,15 @@
 <mat-form-field class="input-container"
     appearance="outline">
     <mat-label>{{ label }}</mat-label>
-    <mat-icon matPrefix>
-        {{ iconePrefixo }}
-    </mat-icon>
-    <input matInput [matAutocomplete]="auto">
+    <mat-icon matPrefix>{{ iconePrefixo }}</mat-icon>
+    <input matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto">
     <mat-icon matSuffix>search</mat-icon>
     <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of unidadesFederativas" [value]="option">
-            {{option.nome}}
+        <mat-option *ngFor="let option of filteredOptions | async"
+            [value]="option.nome">
+            {{ option.nome }}
         </mat-option>
     </mat-autocomplete>
 </mat-form-field>
