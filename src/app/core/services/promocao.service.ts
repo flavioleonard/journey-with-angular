@@ -18,5 +18,4 @@ export class PromocaoService {
   listar () : Observable<Promocao[]> {
     return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)
   }
-  // AQUI EU FAÇO A MINHA REQUISIÇÃO DE LISTAR QUE VAI PODER SER USADA POR TODA A APLICAÇÃO
 }

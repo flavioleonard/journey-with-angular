@@ -25,8 +25,6 @@ export class UnidadeFederativaService {
 
     return this.cache$;
   }
-  // listar () : Observable<Promocao[]> {return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)}
-
 
   private requestEstados(): Observable<UnidadeFederativa[]> {
     return this.http.get<UnidadeFederativa[]>(`${this.apiUrl}/estados`);
