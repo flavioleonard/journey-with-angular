@@ -12,10 +12,11 @@ export class DepoimentoService {
   private apiUrl: string = environment.apiUrl
 
   constructor(
-    private httpClient: HttpClient
-  ) { }
+    private http: HttpClient
+  ) { 
+  }
 
-  listar () : Observable<Depoimento[]> {
-    return this.httpClient.get<Depoimento[]>(`${this.apiUrl}/depoimentos`)
+  listar() : Observable<Depoimento[]>{
+    return this.http.get<Depoimento[]>(`${this.apiUrl}/depoimentos`);
   }
 }
