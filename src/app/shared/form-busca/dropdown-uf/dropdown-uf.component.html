@@ -10,7 +10,9 @@
         [name]="label"
         ngDefaultControl
         [matAutocomplete]="auto">
-    <mat-icon matSuffix>search</mat-icon>
+    <mat-icon matSuffix>
+      {{ iconeSufixo }}
+    </mat-icon>
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
         <mat-option *ngFor="let estado of filteredOptions$ | async" [value]="estado.nome">
           {{estado.nome}}
