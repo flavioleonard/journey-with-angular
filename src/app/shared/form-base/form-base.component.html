@@ -5,7 +5,7 @@
           Crie sua conta
         </mat-card-title>
         <section>
-          <div class="acoesPerfil">
+          <div class="acoesPerfil" *ngIf="perfilComponent">
             <h2>Dados pessoais</h2>
           </div>
         </section>
@@ -57,7 +57,7 @@
               </mat-form-field>
               <app-dropdown-uf
                 label="Estado"
-                placeholder="Estado"
+                placeholder="Selecione o estado"
                 [control]="estadoControl"
                 iconeSufixo="arrow_drop_down"
                 >
@@ -66,8 +66,8 @@
             </div>
           </div>
         </mat-card-content>
-        <mat-divider></mat-divider>
-        <div class="acessoPerfil">
+        <mat-divider *ngIf="perfilComponent"></mat-divider>
+        <div class="acessoPerfil" *ngIf="perfilComponent">
           <h2>Dados de acesso</h2>
         </div>
         <mat-card-content>
@@ -109,7 +109,7 @@
           <button mat-flat-button
             [disabled]="cadastroForm.invalid"
             color="primary"
-          >CADASTRAR
+           (click)="executarAcao()" >CADASTRAR
           </button>
         </mat-card-actions>
       </form>

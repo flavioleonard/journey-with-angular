@@ -3,5 +3,8 @@
 
 </app-banner>
 <section class="cadastro-component">
-    <app-form-base></app-form-base>
+    <app-form-base [perfilComponent]="perfilComponent" (acaoClique)="cadastrar()">
+        <!-- Recebendo um aviso do emit do componente form-base -->
+
+    </app-form-base>
 </section>

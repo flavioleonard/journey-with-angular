@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormularioService } from 'src/app/core/services/formulario.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent{
-  
+  perfilComponent: boolean = false;
+  constructor(private formularioService: FormularioService){
+
+  }
+
+  cadastrar(){
+    const formCadastro = this.formularioService.getCadastro();
+    console.log("Cadastrop relalizado ", formCadastro)
+  }
 }

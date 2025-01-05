@@ -14,6 +14,7 @@ export class DropdownUfComponent implements OnInit {
   @Input() label: string = '';
   @Input() iconePrefixo: string = '';
   @Input() iconeSufixo: string = '';
+  @Input() placeholder: string = '';
 
   @Input() control!: FormControl;
 
