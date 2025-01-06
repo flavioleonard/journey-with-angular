@@ -8,10 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class AutenticacaoService {
   private apiUrl: string = environment.apiUrl
-  constructor(private http: HttpClient) {
-
-   }
-   autenticar(email: string, senha: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/auth/login`, { email, senha });
-   }
+  constructor(private http: HttpClient) {}
+ autenticar(email: string, senha: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/auth/login`, { email, senha })
+  }
 }

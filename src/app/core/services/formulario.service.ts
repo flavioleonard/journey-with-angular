@@ -5,15 +5,15 @@ import { FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class FormularioService {
+
   cadastroForm: FormGroup | null = null;
 
-  getCadastro() : FormGroup | null{
-    return this.cadastroForm
+  getCadastro(): FormGroup | null{
+    return this.cadastroForm;
   }
 
-  setCadastro(form: FormGroup){
-
-    this.cadastroForm = form
-
+  setCadastro(form: FormGroup) {
+    this.cadastroForm = form;
   }
+
 }

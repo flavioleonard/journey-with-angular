@@ -8,36 +8,38 @@ import { AutenticacaoService } from 'src/app/core/services/autenticacao.service'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit{
+
   loginForm!: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private authService: AutenticacaoService,
     private router: Router
-  ){}
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: [null, [Validators.required, Validators.email]], //essa classe angular é uma classe de validações para o usuário saber o porque não esta conseguindo logar
+      email: [null, [Validators.required, Validators.email]],
+      //essa classe angular é uma classe de validações para o usuário saber o porque não esta conseguindo logar
       senha: [null, Validators.required]
     })
   }
-  login(){
-    const email = this.loginForm.value.email;
-    const senha = this.loginForm.value.senha;
 
-    this.authService.autenticar(email, senha).subscribe({
-      next: (value) => {
-        console.log('Login successful', value);
-        this.router.navigateByUrl('/')
-      },
-      error: (err) => {
-        console.log('Erro ao logar ', err);
-      }
-    })
+  login() {
+    if(this.loginForm.valid) {
+      const email = this.loginForm.value.email;
+      const senha = this.loginForm.value.senha;
+      this.authService.autenticar(email, senha).subscribe({
+        next: (value) => {
+          console.log('Autenticado com sucesso', value)
+          this.router.navigateByUrl('/')
+          this.loginForm.reset();
+        },
+        error: (err) => {
+          console.log('Problema na autenticação', err)
+        },
+      })
+    }
   }
-
-
-
 }

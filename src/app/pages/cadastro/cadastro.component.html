@@ -1,10 +1,9 @@
-<app-banner src="assets/imagens/banner-cadastro.png"
-    alt="Banner da tela de cadastro">
-
+<app-banner
+  src="assets/imagens/banner-cadastro.png"
+  alt="Banner da tela de cadastro">
 </app-banner>
-<section class="cadastro-component">
-    <app-form-base [perfilComponent]="perfilComponent" (acaoClique)="cadastrar()">
-        <!-- Recebendo um aviso do emit do componente form-base -->
-
-    </app-form-base>
-</section>
+<app-form-base
+  [perfilComponent]="false"
+  (acaoClique)="cadastrar()">
+  <!-- Recebendo um aviso do emit do componente form-base -->
+</app-form-base>
