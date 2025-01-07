@@ -12,7 +12,12 @@ export class FormBaseComponent implements OnInit{
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<UnidadeFederativa | null>(null, Validators.required);
 
-  @Input() perfilComponent!: boolean;
+  @Input() perfilComponent: boolean = false;
+  @Input() titulo: string = 'CADASTRAR'
+  @Input() textoBotao: string = 'Crie sua conta'
+
+
+
   @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>()
   // Output serve pra dizer algo pra outro componente. Nesse caso ele vai enviar um sinal para o componente pai dizendo (fui clicado) e ai o componente pai inicializa o processo de requisição
 
@@ -38,7 +43,9 @@ export class FormBaseComponent implements OnInit{
     });
     this.formularioService.setCadastro(this.cadastroForm)
   }
-
+  if(this.perfilComponent) {
+    this.cadastroForm.get('aceitarTermos')?.setValidators (null)
+  }
   executarAcao() {
     this.acaoClique.emit();
     // Emititindo o evento. Agora basta o componente pai escutar 

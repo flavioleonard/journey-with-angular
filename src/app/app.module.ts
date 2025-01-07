@@ -41,6 +41,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { StudyComponent } from './shared/study/study.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { StudyComponent } from './shared/study/study.component';
     LoginComponent,
     FormBaseComponent,
     CadastroComponent,
-    StudyComponent
+    StudyComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
