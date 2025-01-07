@@ -9,4 +9,12 @@ export class PerfilComponent {
   titulo = 'Olá, Pessoa'
   textoBotao = 'ATUALIZAR'
   perfilComponent = true
+
+  deslogar(){
+    console.log("Fiz logout")
+  }
+
+  atualizar(){
+    console.log("Atualizei")
+  }
 }
