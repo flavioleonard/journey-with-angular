@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CadastroService } from 'src/app/core/services/cadastro.service';
 import { FormularioService } from 'src/app/core/services/formulario.service';
 import { TokenService } from 'src/app/core/services/token.service';
+import { UserService } from 'src/app/core/services/user.service';
 import { PessoaUsuaria } from 'src/app/core/types/type';
 
 @Component({
@@ -23,7 +25,9 @@ export class PerfilComponent implements OnInit{
   constructor (
     private tokenService: TokenService,
     private cadastroService: CadastroService,
-    private formularioService: FormularioService
+    private formularioService: FormularioService,
+    private userService: UserService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -50,12 +54,30 @@ export class PerfilComponent implements OnInit{
       genero: this.cadastro.genero
     })
   }
+  atualizar(){
+    const dadosAtualizados ={
+      nome: this.form?.value.nome,
+      nascimento: this.form?.value.nascimento,
+      cpf: this.form?.value.cpf,
+      telefone: this.form?.value.telefone,
+      email: this.form?.value.email,
+      senha: this.form?.value.senha,
+      cidade: this.form?.value.cidade,
+      estado: this.form?.value.estado,
+      genero: this.form?.value.genero
+    }
+    this.cadastroService.editarCadastro(dadosAtualizados, this.token).subscribe({
+      next: () => {
+        alert("Perfil alterado!")
+        this.router.navigate(['/'])
+      }
+    })
+  }
 
   deslogar(){
-    console.log("Fiz logout")
-  }
+    this.userService.logout();
+    this.router.navigate(['/login'])
 
-  atualizar(){
-    console.log("Atualizei")
   }
+  
 }

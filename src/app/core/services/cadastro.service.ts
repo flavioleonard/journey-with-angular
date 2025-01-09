@@ -23,7 +23,7 @@ export class CadastroService {
     //método pra buscar os dados do usuário pra página de perfil. Esse método buscar o usuário baseado no seu token. A rota exige que seja passado o headers como authorização 
   }
 
-  editarCadastro(pessoaUsuaria: PessoaUsuaria,token: string): Observable<PessoaUsuaria> {
+  editarCadastro(pessoaUsuaria: PessoaUsuaria, token: string): Observable<PessoaUsuaria> {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
