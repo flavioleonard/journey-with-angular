@@ -5,34 +5,34 @@ import { LoginComponent } from './autenticacao/login/login.component';
 import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
 import { PerfilComponent } from './autenticacao/perfil/perfil.component';
 import { authGuard } from './autenticacao/auth.guard';
-import { BuscaComponent } from './pages/busca/busca.component';
+import { BuscaComponent } from './busca/busca.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomeComponent
   },
   {
     path: 'login',
-    component: LoginComponent,
+    component: LoginComponent
   },
   {
     path: 'cadastro',
-    component: CadastroComponent,
+    component: CadastroComponent
   },
   {
     path: 'perfil',
     component: PerfilComponent,
-    canActivate: [authGuard],
+    canActivate: [authGuard]
   },
   {
     path: 'busca',
-    component: BuscaComponent,
-  },
+    component: BuscaComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

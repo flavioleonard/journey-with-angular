@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { BannerComponent } from "./banner/banner.component";
@@ -11,76 +11,47 @@ import { ContainerComponent } from "./container/container.component";
 import { DropdownUfComponent } from "./dropdown-uf/dropdown-uf.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FormBaseComponent } from "./form-base/form-base.component";
-import { CompanhiasComponent } from "./form-busca/filtros-complementares/companhias/companhias.component";
-import { FiltrosComplementaresComponent } from "./form-busca/filtros-complementares/filtros-complementares.component";
-import { LabelComponent } from "./form-busca/filtros-complementares/label/label.component";
-import { ParadasComponent } from "./form-busca/filtros-complementares/paradas/paradas.component";
-import { PrecosComponent } from "./form-busca/filtros-complementares/precos/precos.component";
 import { FormBuscaComponent } from "./form-busca/form-busca.component";
 import { HeaderComponent } from "./header/header.component";
 import { ModalComponent } from "./modal/modal.component";
-import { PassagemDestaqueComponent } from "./passagem-destaque/passagem-destaque.component";
-import { PassagemComponent } from "./passagem/passagem.component";
 import { SeletorPassageiroComponent } from "./seletor-passageiro/seletor-passageiro.component";
-
 import { MaterialModule } from "../core/material/material.module";
 
-
 @NgModule({
-    declarations: [
-        HeaderComponent,
-        BannerComponent,
-        CardComponent,
-        ContainerComponent,
-        FooterComponent,
-        CardBuscaComponent,
-        CardDepoimentoComponent,
-        FormBuscaComponent,
-        ModalComponent,
-        BotaoControleComponent,
-        DropdownUfComponent,
-        SeletorPassageiroComponent,
-        FormBaseComponent,
-        PassagemComponent,
-        ParadasComponent,
-        CompanhiasComponent,
-        PrecosComponent,
-        LabelComponent,
-        FiltrosComplementaresComponent,
-        PassagemDestaqueComponent
-    ],
-    imports: [
-        CommonModule,
-        //o commonModule fornece o que eu vou precisar usar nesses modulos que não são da raiz, são modulos de funcionalidade 
-        MaterialModule,
-        ReactiveFormsModule
-
-    ],
-    exports: [
-        //o que expor para outros modulos 
-        HeaderComponent,
-        BannerComponent,
-        CardComponent,
-        ContainerComponent,
-        FooterComponent,
-        CardBuscaComponent,
-        CardDepoimentoComponent,
-        FormBuscaComponent,
-        ModalComponent,
-        BotaoControleComponent,
-        DropdownUfComponent,
-        SeletorPassageiroComponent,
-        FormBaseComponent,
-        PassagemComponent,
-        ParadasComponent,
-        CompanhiasComponent,
-        PrecosComponent,
-        LabelComponent,
-        FiltrosComplementaresComponent,
-        PassagemDestaqueComponent
-    ]
+  declarations: [
+    BannerComponent,
+    CardComponent,
+    CardBuscaComponent,
+    CardDepoimentoComponent,
+    ContainerComponent,
+    DropdownUfComponent,
+    FooterComponent,
+    FormBaseComponent,
+    FormBuscaComponent,
+    HeaderComponent,
+    SeletorPassageiroComponent,
+    ModalComponent,
+    BotaoControleComponent
+  ],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    BannerComponent,
+    CardComponent,
+    CardBuscaComponent,
+    CardDepoimentoComponent,
+    ContainerComponent,
+    DropdownUfComponent,
+    FooterComponent,
+    FormBaseComponent,
+    FormBuscaComponent,
+    HeaderComponent,
+    SeletorPassageiroComponent,
+    ModalComponent,
+    BotaoControleComponent
+  ]
 })
-
-export class SharedModule{
-
-}
+export class SharedModule { }

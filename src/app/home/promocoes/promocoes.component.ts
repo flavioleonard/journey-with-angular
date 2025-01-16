@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PromocaoService } from '../services/promocao.service';
+import { PromocaoService } from 'src/app/home/services/promocao.service';
 import { Promocao } from 'src/app/core/types/type';
 
 @Component({

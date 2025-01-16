@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatChipSelectionChange } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
-import { DadosBusca, UnidadeFederativa } from '../types/type';
+import { DadosBusca, UnidadeFederativa } from 'src/app/core/types/type';
 
 @Injectable({
   providedIn: 'root'
