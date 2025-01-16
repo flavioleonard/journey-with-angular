@@ -13,6 +13,7 @@ import { BuscaComponent } from './pages/busca/busca.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './pages/home/home.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HomeModule } from './pages/home/home.module';
     CadastroComponent,
     PerfilComponent,
     BuscaComponent,
-    LoginComponent,
+    LoginComponent
     
   ],
   imports: [
@@ -33,6 +34,7 @@ import { HomeModule } from './pages/home/home.module';
     HomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

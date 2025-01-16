@@ -8,21 +8,20 @@ import { SharedModule } from "src/app/shared/shared.module";
 
 @NgModule({
     declarations: [
+        HomeComponent,
         PromocoesComponent,
         DepoimentosComponent,
-        HomeComponent,
     ],
-    imports: [
+    imports:  [
         CommonModule,
         MaterialModule,
-        SharedModule
+        SharedModule,
     ],
     exports: [
+        HomeComponent,
         PromocoesComponent,
-        DepoimentosComponent,
-        HomeComponent
-    ],
+        DepoimentosComponent
+    ]
 })
 export class HomeModule {
-
 }
