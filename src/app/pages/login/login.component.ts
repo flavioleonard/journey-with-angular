@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
-      //essa classe angular é uma classe de validações para o usuário saber o porque não esta conseguindo logar
       senha: [null, Validators.required]
     })
   }

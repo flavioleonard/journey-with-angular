@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-const KEY = 'token'
+
+const KEY = 'token';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,14 +11,16 @@ export class TokenService {
   }
 
   excluirToken() {
-    localStorage.removeItem(KEY) 
+    localStorage.removeItem(KEY)
   }
 
   retornarToken() {
-    return localStorage.getItem(KEY) ?? ""
+    return localStorage.getItem(KEY) ?? ''
   }
   
   possuiToken() {
     return !!this.retornarToken();
   }
 }
+
+

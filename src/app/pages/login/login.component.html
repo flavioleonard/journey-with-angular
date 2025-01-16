@@ -20,7 +20,6 @@
             <input matInput formControlName="email" type="email" placeholder="Digite seu e-mail">
             <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
             <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">E-mail inválido</mat-error>
-             <!--tag do angular pra tratamento de erros  -->
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
@@ -40,3 +39,6 @@
     </div>
   </mat-card>
 </section>
+
+
+
