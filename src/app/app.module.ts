@@ -24,8 +24,7 @@ import { BuscaModule } from './busca/busca.module';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    HomeModule,
-    BuscaModule
+    HomeModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
