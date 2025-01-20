@@ -19,4 +19,11 @@ export class HeaderComponent {
     this.userService.logout();
     this.router.navigate(['auth/login'])
   }
+  cliquei(){
+    console.log('cliquei')
+  }
+  navegarPara(rota: string) {
+    this.router.navigate([rota]);
+  }
+  
 }
