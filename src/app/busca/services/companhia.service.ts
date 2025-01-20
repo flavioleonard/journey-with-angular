@@ -16,6 +16,6 @@ export class CompanhiaService {
   ) { }
 
   listar () : Observable<Companhia[]> {
-    return this.httpClient.get<Companhia[]>(`${this.apiUrl}/companhias`)
+    return this.httpClient.get<Companhia[]>(`${this.apiUrl}/companhias`);
   }
 }

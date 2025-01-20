@@ -17,10 +17,10 @@ export class HeaderComponent {
 
   logout() {
     this.userService.logout();
-    this.router.navigate(['auth/login'])
+    this.router.navigate(['auth/login']);
   }
   cliquei(){
-    console.log('cliquei')
+    console.log('cliquei');
   }
   navegarPara(rota: string) {
     this.router.navigate([rota]);

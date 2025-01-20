@@ -16,6 +16,6 @@ export class DepoimentosComponent implements OnInit {
       res => {
         this.depoimentos = res;
       }
-    )
+    );
   }
 }

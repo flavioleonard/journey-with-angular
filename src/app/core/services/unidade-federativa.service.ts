@@ -8,7 +8,7 @@ import { UnidadeFederativa } from '../types/type';
   providedIn: 'root'
 })
 export class UnidadeFederativaService {
-  private apiUrl: string = environment.apiUrl
+  private apiUrl: string = environment.apiUrl;
   private cache$?: Observable<UnidadeFederativa[]>;
 
   constructor(

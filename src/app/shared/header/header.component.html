@@ -1,16 +1,16 @@
 <header class="app-header">
   <mat-toolbar>
-    <a (click)="navegarPara('/')">
+    <button (click)="navegarPara('/')">
       <img src="assets/imagens/logo.png" alt="Logo da aplicação Jornada">
-    </a>
+    </button>
     <span class="spacer"></span>
     <div class="links-toolbar">
       <button mat-button>Vender milhas</button>
       <button mat-button>Sobre</button>
       <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">
-        <a (click)="navegarPara('auth/perfil')">
+        <button (click)="navegarPara('auth/perfil')">
           <img src="assets/icones/user.png" alt="Ícone da pessoa usuária">
-        </a>
+        </button>
         <button mat-stroked-button color="primary" (click)="logout()">SAIR</button>
       </ng-container>
       <ng-template #login>

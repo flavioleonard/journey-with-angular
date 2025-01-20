@@ -30,7 +30,9 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "semi": ["error", "always"],
     },
+    
   },
   {
     files: ["**/*.html"],

@@ -19,23 +19,23 @@ export class PassagensService {
     const obs =  this.httpClient.get<Resultado>(this.apiUrl + '/passagem/search?' + params);
     obs.pipe(take(1)).subscribe(res =>
       {
-        this.precoMin = res.precoMin
-        this.precoMax = res.precoMax
+        this.precoMin = res.precoMin;
+        this.precoMax = res.precoMax;
       }
-    )
-    return obs
+    );
+    return obs;
   }
 
   converterParametroParaString(busca: DadosBusca){
     const query = Object.entries(busca)
       .map( ([key, value]) => {
         if(!value){
-          return ''
+          return '';
         }
-        return `${key}=${value}`
+        return `${key}=${value}`;
       })
-      .join('&')
-      return query
+      .join('&');
+      return query;
   }
   obterPassagensDestaques(passagem: Passagem[]): Destaques | undefined {
     if (!passagem.length) {
