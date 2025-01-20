@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './home/home.module';
 import { BuscaModule } from './busca/busca.module';
+import { ErroModule } from './core/erro/erro.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BuscaModule } from './busca/busca.module';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    HomeModule
+    HomeModule,
+    ErroModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
