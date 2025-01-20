@@ -10,7 +10,6 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './home/home.module';
-import { BuscaModule } from './busca/busca.module';
 import { ErroModule } from './core/erro/erro.module';
 import { ErrosInterceptor } from './core/erro/erros.interceptor';
 

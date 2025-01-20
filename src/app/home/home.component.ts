@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
         }
       )
   }
-  navegarParaBusca(ev: any) {
+  navegarParaBusca() {
     this.router.navigate(['busca']);
   }
 }

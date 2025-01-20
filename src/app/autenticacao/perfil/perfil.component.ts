@@ -18,9 +18,9 @@ export class PerfilComponent implements OnInit{
   perfilComponent = true;
 
   cadastro!: PessoaUsuaria;
-  token: string = '';
-  nome: string = '';
-  form!: FormGroup<any> | null;
+  token = '';
+  nome = '';
+  form!: FormGroup | null;
 
   constructor(
     private cadastroService: CadastroService,

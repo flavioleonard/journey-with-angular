@@ -19,16 +19,16 @@ export class ErrosInterceptor implements HttpInterceptor {
       catchError((error: HttpErrorResponse) => {
         let errorMessage = 'Ocorreu um erro desconhecido'
         if(error.error instanceof ErrorEvent){
-          let errorMessage = `Erro do cliente: ${error.error.message}`
+          errorMessage = `Erro do cliente: ${error.error.message}`
         }
         else if(error.status === 404){
-          let errorMessage = 'Recurso não encontrado'
+          errorMessage = 'Recurso não encontrado'
         }
         else if(error.status === 500){
-          let errorMessage = 'Erro interno do servidor'
+          errorMessage = 'Erro interno do servidor'
         }
         else if(error.status === 401){
-          let errorMessage = 'Você não tem autorização para acessar esse recurso'
+          errorMessage = 'Você não tem autorização para acessar esse recurso'
         }
 
         this.mensagemService.openSnackBar(errorMessage);
